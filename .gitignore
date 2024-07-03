@@ -1,0 +1,6 @@
+*~
+.DS_Store
+demo-starter
+contracts/*/*.abi
+contracts/*/*.hex
+contracts/*/*.go
