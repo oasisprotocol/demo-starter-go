@@ -6,7 +6,7 @@ include ../../common.mk
 
 MessageBox:
 	@printf "$(CYAN)*** Compiling $(BLUE)$@$(CYAN)...$(OFF)\n"
-	@solc --bin --abi --optimize --overwrite -o . $@.sol
+	@solc --evm-version paris --bin --abi --optimize --overwrite -o . $@.sol
 	@mv $@.bin $@.hex
 	@printf "$(CYAN)*** Generating Go bindings for $(BLUE)$@$(CYAN)...$(OFF)\n"
 	@abigen --abi=$@.abi --bin=$@.hex --pkg message_box --out=$@.go
